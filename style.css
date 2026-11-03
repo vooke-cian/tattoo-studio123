@@ -1,0 +1,371 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0b0b0c;
+  color: #f5f1e9;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  background: #111;
+  padding: 20px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #8d713c;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  color: #d2ad63;
+  font-size: 23px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+nav a:hover {
+  color: #d2ad63;
+}
+
+#menuToggle {
+  display: none;
+  background: none;
+  color: white;
+  border: none;
+  font-size: 25px;
+}
+
+.hero {
+  min-height: 580px;
+  padding: 70px 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  background: radial-gradient(circle, #332819, #0b0b0c 65%);
+}
+
+.hero h1 {
+  font-size: clamp(45px, 6vw, 75px);
+  line-height: 1.1;
+  margin: 20px 0;
+}
+
+.hero h1 em {
+  color: #d2ad63;
+}
+
+.hero p {
+  color: #bbb;
+  margin-bottom: 25px;
+}
+
+.gold-text {
+  color: #d2ad63;
+  letter-spacing: 3px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.hero-image {
+  height: 430px;
+  background:
+    linear-gradient(#0002, #0007),
+    url("https://images.unsplash.com/photo-1590246814883-57c6b2f3a7b7?auto=format&fit=crop&w=1000&q=85")
+    center/cover;
+  filter: grayscale(100%);
+  border: 1px solid #b8954e;
+}
+
+.btn {
+  display: inline-block;
+  background: #c9a45c;
+  color: #15120d;
+  border: 1px solid #c9a45c;
+  padding: 13px 22px;
+  margin: 5px 5px 5px 0;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.btn:hover {
+  background: #e3c37f;
+}
+
+.btn.outline {
+  background: transparent;
+  color: white;
+  border-color: #aaa;
+}
+
+.intro {
+  text-align: center;
+  padding: 90px 20px;
+  border-bottom: 1px solid #292929;
+}
+
+.intro h2,
+.section h2 {
+  font-size: 38px;
+  margin: 15px 0;
+  font-family: Georgia, serif;
+}
+
+.intro p:last-child {
+  max-width: 600px;
+  margin: auto;
+  color: #aaa;
+}
+
+.section {
+  max-width: 1150px;
+  margin: auto;
+  padding: 85px 25px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 25px 0;
+}
+
+.filter {
+  padding: 9px 16px;
+  background: transparent;
+  border: 1px solid #555;
+  color: white;
+  cursor: pointer;
+}
+
+.filter.active,
+.filter:hover {
+  background: #c9a45c;
+  color: #111;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.tattoo-card {
+  background: #151515;
+  padding-bottom: 15px;
+}
+
+.tattoo-card h3,
+.tattoo-card p {
+  margin: 8px 15px 0;
+}
+
+.tattoo-card p,
+.artist-grid p {
+  color: #aaa;
+  font-size: 13px;
+}
+
+.tattoo-photo {
+  height: 260px;
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(80%);
+}
+
+.dragon {
+  background-image: url("https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?auto=format&fit=crop&w=800&q=80");
+}
+
+.lion {
+  background-image: url("https://images.unsplash.com/photo-1597851065532-055f97d4a7c4?auto=format&fit=crop&w=800&q=80");
+}
+
+.rose {
+  background-image: url("https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&w=800&q=80");
+}
+
+.fine {
+  background-image: url("https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80");
+}
+
+.generator,
+.booking {
+  background: #171613;
+  max-width: none;
+  padding-left: max(25px, calc((100% - 1100px) / 2));
+  padding-right: max(25px, calc((100% - 1100px) / 2));
+}
+
+form {
+  max-width: 650px;
+  margin-top: 25px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 14px;
+  margin: 8px 0 15px;
+  background: #0d0d0d;
+  border: 1px solid #555;
+  color: white;
+  outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #c9a45c;
+}
+
+textarea {
+  resize: vertical;
+}
+
+#ideaResult {
+  white-space: pre-wrap;
+  color: #e5cc96;
+  margin-top: 20px;
+}
+
+.artist-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.artist {
+  height: 230px;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%);
+}
+
+.artist-one {
+  background-image: url("https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=700&q=80");
+}
+
+.artist-two {
+  background-image: url("https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=700&q=80");
+}
+
+.artist-three {
+  background-image: url("https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80");
+}
+
+.artist-grid h3 {
+  margin-top: 12px;
+}
+
+.small-note {
+  color: #999;
+  font-size: 11px;
+  margin-top: 20px;
+}
+
+.consent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #bbb;
+  font-size: 12px;
+}
+
+.consent input {
+  width: auto;
+}
+
+footer {
+  text-align: center;
+  background: #080808;
+  border-top: 1px solid #9b7941;
+  padding: 45px 20px;
+}
+
+footer h2 {
+  color: #d2ad63;
+  letter-spacing: 3px;
+}
+
+footer p {
+  color: #999;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+@media (max-width: 700px) {
+  #menuToggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: #111;
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 50px 7%;
+  }
+
+  .hero-image {
+    height: 300px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .artist-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .section h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 420px) {
+  .artist-grid {
+    grid-template-columns: 1fr;
+  }
+}
