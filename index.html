@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Golden Ink Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <a class="logo" href="#home">GOLDEN INK</a>
+  <button id="menuToggle">☰</button>
+  <nav id="mainNav">
+    <a href="#home">Home</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#generator">AI Generator</a>
+    <a href="#artists">Artists</a>
+    <a href="#booking">Book Now</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <p class="gold-text">WELCOME TO GOLDEN INK STUDIO</p>
+    <h1>YOUR ART.<br><em>YOUR STYLE.</em><br>YOUR WORLD.</h1>
+    <p>Discover exceptional tattoo designs and turn your vision into timeless art.</p>
+    <a href="#gallery" class="btn">Explore Designs ↗</a>
+    <a href="#booking" class="btn outline">Book Appointment</a>
+  </div>
+  <div class="hero-image"></div>
+</section>
+
+<section class="intro">
+  <p class="gold-text">THE ART OF EXPRESSION</p>
+  <h2>Every Tattoo Tells A Story</h2>
+  <p>Explore beautiful tattoo designs and discover artwork that represents your personality.</p>
+</section>
+
+<section class="section" id="gallery">
+  <p class="gold-text">OUR COLLECTION</p>
+  <h2>Popular Tattoo Designs</h2>
+
+  <div class="filters">
+    <button class="filter active" data-filter="all">All</button>
+    <button class="filter" data-filter="Realism">Realism</button>
+    <button class="filter" data-filter="Japanese">Japanese</button>
+    <button class="filter" data-filter="Traditional">Traditional</button>
+    <button class="filter" data-filter="Fine line">Fine Line</button>
+  </div>
+
+  <div class="gallery-grid">
+    <article class="tattoo-card" data-category="Japanese">
+      <div class="tattoo-photo dragon"></div>
+      <h3>Imperial Dragon</h3>
+      <p>Japanese tattoo art</p>
+    </article>
+
+    <article class="tattoo-card" data-category="Realism">
+      <div class="tattoo-photo lion"></div>
+      <h3>Royal Lion</h3>
+      <p>Black and grey realism</p>
+    </article>
+
+    <article class="tattoo-card" data-category="Traditional">
+      <div class="tattoo-photo rose"></div>
+      <h3>Crimson Rose</h3>
+      <p>Traditional tattoo</p>
+    </article>
+
+    <article class="tattoo-card" data-category="Fine line">
+      <div class="tattoo-photo fine"></div>
+      <h3>Fine Line Art</h3>
+      <p>Minimalist design</p>
+    </article>
+  </div>
+</section>
+
+<section class="generator section" id="generator">
+  <p class="gold-text">CREATE YOUR OWN CONCEPT</p>
+  <h2>Dream It. Design It.</h2>
+  <p>Describe your tattoo idea and create a design brief to share with an artist.</p>
+
+  <form id="ideaForm">
+    <textarea id="idea" placeholder="Describe your tattoo idea..." required></textarea>
+
+    <select id="ideaStyle">
+      <option>Black and Grey Realism</option>
+      <option>Fine Line</option>
+      <option>Japanese</option>
+      <option>Traditional</option>
+      <option>Geometric</option>
+    </select>
+
+    <select id="ideaPlace">
+      <option>Upper Arm</option>
+      <option>Forearm</option>
+      <option>Back</option>
+      <option>Chest</option>
+      <option>Leg</option>
+    </select>
+
+    <button class="btn" type="submit">Create My Design Brief</button>
+  </form>
+
+  <div id="ideaResult"></div>
+</section>
+
+<section class="section" id="artists">
+  <p class="gold-text">OUR CREATIVE TEAM</p>
+  <h2>Meet Our Artists</h2>
+
+  <div class="artist-grid">
+    <article>
+      <div class="artist artist-one"></div>
+      <h3>Alex Morgan</h3>
+      <p>Realism Specialist</p>
+    </article>
+
+    <article>
+      <div class="artist artist-two"></div>
+      <h3>Maya Chen</h3>
+      <p>Fine Line Specialist</p>
+    </article>
+
+    <article>
+      <div class="artist artist-three"></div>
+      <h3>Daniel Reyes</h3>
+      <p>Japanese Tattoo Artist</p>
+    </article>
+  </div>
+  <p class="small-note">Sample artist profiles. Replace these with verified studio information.</p>
+</section>
+
+<section class="booking section" id="booking">
+  <p class="gold-text">LET'S CREATE SOMETHING SPECIAL</p>
+  <h2>Book A Consultation</h2>
+  <p>Send us your details and tell us about your tattoo idea.</p>
+
+  <form id="bookingForm">
+    <input name="name" placeholder="Full Name" required>
+    <input name="email" type="email" placeholder="Email Address" required>
+    <input name="phone" placeholder="Phone / WhatsApp" required>
+
+    <select name="artist">
+      <option>Any Available Artist</option>
+      <option>Alex Morgan</option>
+      <option>Maya Chen</option>
+      <option>Daniel Reyes</option>
+    </select>
+
+    <textarea name="message" placeholder="Describe your tattoo idea..." required></textarea>
+
+    <label class="consent">
+      <input type="checkbox" required>
+      I agree to be contacted about this consultation.
+    </label>
+
+    <button class="btn" type="submit">Send Request</button>
+    <p id="bookingStatus"></p>
+  </form>
+</section>
+
+<footer>
+  <h2>GOLDEN INK STUDIO</h2>
+  <p>Your Art. Your Style. Your World.</p>
+  <p>© <span id="year"></span> Golden Ink Studio</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
